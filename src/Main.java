@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Point point1 = new Point(1,3);
+        Point point1 = new Point(1, 3);
         Point point2 = new Point(4, 8);
         Point point3 = new Point(5, 9);
         Point point4 = new Point(3, 6);
@@ -9,8 +9,13 @@ public class Main {
         ClosedPolyLine closedPolyLine = new ClosedPolyLine(point1, point2, point3, point4, point1);
 
         System.out.println(polyLine);
-        System.out.println(polyLine.length());
+        System.out.println(getLength(polyLine));
         System.out.println(closedPolyLine);
-        System.out.println(closedPolyLine.length());
+        System.out.println(getLength(closedPolyLine));
+
+    }
+
+    public static double getLength (Measurable mes) {
+        return mes.getLength();
     }
 }
